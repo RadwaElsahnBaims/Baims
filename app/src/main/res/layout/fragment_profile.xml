@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layoutDirection="locale"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constrainedHeight="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/_8sdp">
+
+            <ImageView
+                android:id="@+id/image_profile"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:layout_marginEnd="@dimen/_16sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_logout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:layout_marginEnd="@dimen/_16sdp"
+                android:text="الخروج"
+                android:gravity="center"
+                android:drawableTop="@drawable/logout"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_name"
+                style="@style/textViewTitleStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@id/image_profile"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="a;sldklk;alskd" />
+
+            <TextView
+                android:id="@+id/tv_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/intercom_input_text_hint_color"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="@id/tv_name"
+                app:layout_constraintTop_toBottomOf="@+id/tv_name"
+                tools:text="a;sldklk;alskd" />
+
+
+            <TextView
+                android:id="@+id/tv_mail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/intercom_input_text_hint_color"
+                app:layout_constraintStart_toStartOf="@id/tv_name"
+                app:layout_constraintTop_toBottomOf="@+id/tv_number"
+                tools:text="a;sldklk;alskd" />
+
+
+            <TextView
+                android:id="@+id/tv_watches"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:text="0"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@id/image_profile"
+                app:layout_constraintTop_toBottomOf="@+id/tv_mail" />
+
+            <TextView
+                android:id="@+id/tv_watches_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:text="مشاهدات"
+                android:textColor="@color/lightTextColor"
+                app:layout_constraintStart_toEndOf="@id/image_profile"
+                app:layout_constraintTop_toBottomOf="@+id/tv_watches" />
+
+            <TextView
+                android:id="@+id/tv_courses_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:text="0"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@id/view_separator"
+                app:layout_constraintTop_toBottomOf="@+id/tv_mail" />
+
+            <TextView
+                android:id="@+id/tv_courses_lable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:paddingTop="0dp"
+                android:text="@string/courses"
+                android:textColor="@color/lightTextColor"
+                app:layout_constraintStart_toEndOf="@id/view_separator"
+                app:layout_constraintTop_toBottomOf="@+id/tv_courses_number" />
+
+            <View
+                android:id="@+id/view_separator"
+                android:layout_width="1dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:layout_marginEnd="@dimen/_16sdp"
+                android:background="@color/separator"
+                android:visibility="invisible"
+                app:layout_constraintStart_toEndOf="@id/tv_watches_label"
+                app:layout_constraintTop_toBottomOf="@+id/tv_mail" />
+
+            <!--<android.support.constraint.Guideline-->
+            <!--android:id="@+id/guideline"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:orientation="horizontal"-->
+            <!--app:layout_constraintGuide_begin="173dp" />-->
+
+
+            <TextView
+                android:id="@+id/tv_no_courses"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_64sdp"
+                android:text="@string/not_subscribed_yet"
+                android:textColor="@color/lightTextColor"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_courses_lable" />
+
+            <TextView
+                android:id="@+id/tv_your_courses"
+                style="@style/textViewTitleStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/your_courses"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_courses_lable" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rc_sections"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_your_courses"
+                tools:listitem="@layout/item_section" />
+
+            <ProgressBar
+                android:id="@+id/progress_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </android.support.constraint.ConstraintLayout>
+    </android.support.v4.widget.NestedScrollView>
+</android.support.constraint.ConstraintLayout>

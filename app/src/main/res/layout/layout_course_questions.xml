@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layoutDirection="rtl">
+
+    <TextView
+        android:id="@+id/tv_chapter_name_questions"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:paddingStart="@dimen/_8sdp"
+        android:paddingEnd="@dimen/_8sdp"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:background="@color/colorPrimary"
+        tools:text=";alskdals;d" />
+
+    <TextView
+        android:id="@+id/tv_lecture_name_ques"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/play_video"
+        android:drawablePadding="@dimen/_8sdp"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:gravity="start"
+        android:textAlignment="viewStart"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_chapter_name_questions"
+        tools:text=";laksd;alskd" />
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_questions"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/separator"
+        app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_lecture_name_ques"
+        tools:listitem="@layout/item_question" />
+
+
+    <TextView
+        android:id="@+id/tv_no_questions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/no_questions"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_lecture_name_ques" />
+
+
+</android.support.constraint.ConstraintLayout>

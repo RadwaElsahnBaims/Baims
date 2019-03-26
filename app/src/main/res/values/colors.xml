@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#00cecb</color>
+    <color name="colorPrimaryDark">@color/colorPrimary</color>
+    <color name="colorAccent">@color/colorPrimary</color>
+    <color name="separatorLight">#FFDCDCDC</color>
+    <color name="colorHint">#B2B2BB</color>
+    <color name="separator">#B2B2BB</color>
+    <color name="lightTextColor">#9B9B9B</color>
+    <color name="darkTextColor">#4A4A4A</color>
+    <color name="baimsPurple">#BF5DAE</color>
+</resources>

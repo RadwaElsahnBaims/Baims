@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layoutDirection="rtl"
+    android:paddingStart="@dimen/_8sdp"
+    android:paddingEnd="@dimen/_8sdp"
+    tools:layout_editor_absoluteY="25dp">
+
+    <ImageView
+        android:id="@+id/tv_show_more_details"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:padding="@dimen/_10sdp"
+        app:layout_constraintBottom_toBottomOf="@id/tv_section_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_section_name"
+        app:srcCompat="@drawable/ic_down_arrow" />
+
+    <TextView
+        android:id="@+id/tv_section_name"
+        style="@style/textViewTitleStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/tv_show_more_details"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="section name" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rc_tags"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+        app:layout_constraintStart_toStartOf="@id/tv_section_name"
+        app:layout_constraintTop_toBottomOf="@+id/tv_section_name"
+        tools:listitem="@layout/item_tag" />
+
+    <android.support.constraint.Group
+        android:id="@+id/group_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="tv_lbl_desc,tv_desc" />
+
+    <TextView
+        android:id="@+id/tv_lbl_desc"
+        style="@style/textViewTitleStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:text="@string/description"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rc_tags" />
+
+
+    <TextView
+        android:id="@+id/tv_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/lightTextColor"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_lbl_desc"
+        tools:text="kkjhkljhkljhk jhkjhkjh jkh jkh jkh" />
+
+    <android.support.constraint.Group
+        android:id="@+id/group1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:constraint_referenced_ids="tv_file,tv_total_time,tv_instructor_name,tv_videos,iv_instructor"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_desc" />
+
+    <TextView
+        android:id="@+id/tv_file"
+        android:layout_width="112dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:drawableTop="@drawable/ic_file"
+        android:gravity="center_horizontal"
+        app:layout_constraintEnd_toStartOf="@id/tv_total_time"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_desc"
+        tools:text="lkkljlkj" />
+
+    <TextView
+        android:id="@+id/tv_total_time"
+        android:layout_width="112dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:drawableTop="@drawable/ic_time"
+        android:gravity="center_horizontal"
+        app:layout_constraintEnd_toStartOf="@+id/tv_videos"
+        app:layout_constraintStart_toEndOf="@id/tv_file"
+        app:layout_constraintTop_toBottomOf="@+id/tv_desc"
+        tools:text="lkkljlkj" />
+
+    <TextView
+        android:id="@+id/tv_videos"
+        android:layout_width="112dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:drawableTop="@drawable/ic_multimedia"
+        android:gravity="center_horizontal"
+        app:layout_constraintEnd_toStartOf="@+id/tv_file"
+        app:layout_constraintStart_toEndOf="@id/tv_total_time"
+        app:layout_constraintTop_toBottomOf="@+id/tv_desc"
+        tools:text="lkkljlkj" />
+
+    <ImageView
+        android:id="@+id/iv_instructor"
+        android:layout_width="@dimen/_64sdp"
+        android:layout_height="@dimen/_64sdp"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:src="@drawable/instructor_default"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_file" />
+
+    <TextView
+        android:id="@+id/tv_instructor_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:gravity="center_horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_instructor"
+        tools:text="asldkalskdj" />
+
+
+    <include
+        android:id="@+id/view_intro"
+        layout="@layout/item_lecture"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8sdp"
+        app:layout_constraintBottom_toTopOf="@+id/rc_chapters"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_instructor_name" />
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rc_chapters"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view_intro"
+        tools:listitem="@layout/item_chapter" />
+
+
+</android.support.constraint.ConstraintLayout>
